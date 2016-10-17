@@ -1,17 +1,22 @@
-buildscript { 
+buildscript {
   repositories {
-    jcenter()
+        jcenter()
   }
-  dependencies { 
-   classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.0.RELEASE'
+  dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE'
   }
-}
-apply plugin: 'spring-boot'
+ }
+ apply plugin: 'spring-boot'
+
+springBoot {
+  mainClass = "com.threepillarglobal.microservices.mission.MissionBoot"
+ }
+
 repositories { jcenter()
 }
 dependencies {
-  compile "org.springframework.boot:spring-boot-starter-actuator"
-    compile "org.springframework.boot:spring-boot-starter-data-mongodb"
-  
-  compile "org.springframework.boot:spring-boot-starter-web"
-}
+        compile "org.springframework.boot:spring-boot-starter-actuator"
+        compile "org.springframework.boot:spring-boot-starter-web"
+        compile "org.springframework.data:spring-data-mongodb"
+ }
+ 
