@@ -17,3 +17,15 @@ This project is developed and maintained by [3Pillar Global](http://www.3pillarg
 * start the services with:
   `docker-compose up -d`
 * to add an employee:
+  `curl -X POST -H "Content-Type: application/json" -d '{\
+  "id": "66fb2f1930e07c6c844b02aa",\
+  "email": "tim.schmelmer@gmail.com",\
+  "fullName": "Tim Schmelmer",\
+  "managerEmail": null\
+}' http://localhost:8080/employee
+
+* to list all employees:
+  `curl -H "Content-Type: application/json" http://localhost:8080/employee`
+
+
+
